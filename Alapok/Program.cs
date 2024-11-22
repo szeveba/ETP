@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // számok (egész, valós), karakter, karakterlánc, logikai
+            int[] tömb = { 1, 2, 3 };
         }
     }
 }
