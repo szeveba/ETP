@@ -84,13 +84,17 @@ int[] tömb2 = { 1, 2, 3 };
 |!|nem|!(a == b)|
 |?:|ternary operator|a > b ? a : b|
 
-## Vezérlési szerkezetek
+## Vezérlési szerkezetekek
+
+Az utasítások sorrendjét befolyásoló szerkezetek:
+
 1. **Szekvencia:** utasítások egymás után
 2. **Elágazás:** feltételhez kötött utasítások
 3. **Ciklus:** feltételhez kötött ismétlés
 
 ### Elágazás
-#### if
+#### Feltételvizsgálat esetén (if)
+
 ```csharp
 if (logikai feltétel)
 {
@@ -106,8 +110,8 @@ if (logikai feltétel) Console.WriteLine("Igaz");
 else Console.WriteLine("Hamis");
 ```
 
-#### switch-case
-**Értékvizsgálat esetén**
+#### Értékvizsgálat esetén (switch-case)
+
 ```csharp
 switch (változó)
 {
@@ -141,7 +145,7 @@ switch (változó)
 	}
 ```
 
-### Ciklus
+### Ciklusok
 |név|jelölés|funkció|
 |:---:|:---:|:---:|
 |elõltesztelõ ciklus|while (feltétel) {}|addig ismétli, amíg a feltétel igaz|
@@ -149,7 +153,7 @@ switch (változó)
 |számláló|for (kezdõérték; feltétel; lépték) {}|addig ismétli, amíg a feltétel igaz|
 |bejárás|foreach (változó in tömb) {}|végigmegy egy gyûjtemény elemein|
 
-while
+#### Elõltesztelõ ciklus (while)
 ```csharp
 while(logikai feltétel)
 {
@@ -157,7 +161,7 @@ while(logikai feltétel)
 }
 ```
 
-számláló
+#### Számláló (for)
 ```csharp
 for (int i = 0; i < 10; i++)
 {
@@ -179,7 +183,7 @@ int c = a++; // c = 0, a = 1
 c = --b; // b = 2, c = 2
 ```
 
-hátultesztelõ ciklus
+#### Hátultesztelõ ciklus (do-while)
 ```csharp
 do
 {
@@ -194,7 +198,7 @@ while (logikai feltétel){
 }
 ```
 
-bejárás
+#### Bejáró ciklus (foreach)
 
 ```csharp
 int[] tömb = { 1, 2, 3 };
@@ -203,3 +207,65 @@ foreach (var i in tömb)
 	// ciklusmag
 }
 ```
+
+## Fejlesztõkörnyezet
+- **Visual Studio:** Microsoft által fejlesztett IDE (Integrated Development Environment)
+- **C#:** Microsoft által fejlesztett programozási nyelv
+- **.NET:** Microsoft által fejlesztett keretrendszer fõleg C#-hoz
+- **Solution:** egy vagy több projektet tartalmazó munkaterület (.sln fájl)
+- **Projekt:** egy alkalmazás vagy könyvtár (.csproj fájl)
+- **Solution Explorer:** megjeleníti a megnyitott solution elemeit
+
+Nézetek megnyitása esetén: Ctrl + Q: Feature search
+
+## Program felépítése
+- **Felhasználói felület:** amin keresztül tud interaktálni a felhasználó a programmal
+- **Üzleti logika:** a program mûködését meghatározó rész
+- **Adatelérés:** adatok lekérdezése, módosítása, törlése
+
+## Konzol
+- **Console:** a konzolablakot reprezentáló osztály
+- **WriteLine:** kiír egy sort a konzolra majd egy sortörést tesz
+- **Write:** kiír egy sort a konzolra, de nem tesz utána sortörést
+- **ReadLine:** beolvassa a felhasználó által beírt sort (Enter lenyomásáig)
+- **ReadKey:** beolvassa a felhasználó által lenyomott billentyût
+- **Clear:** törli a konzol tartalmát
+- **ForegroundColor:** a konzol szövegének színe
+- **BackgroundColor:** a konzol háttérszínének színe
+- **CursorVisible:** a kurzor láthatósága
+- **CursorLeft:** kurzor vízszintes pozíciója
+- **CursorTop:** kurzor függõleges pozíciója
+- **SetCursorPosition:** kurzor pozíciójának beállítása
+- **Title:** konzolablak címe
+- **WindowWidth:** konzolablak szélessége (hány karakter)
+- **WindowHeight:** konzolablak magassága (hány karakter)
+
+## Math segédosztály
+**Math:** matematikai mûveletek végrehajtására szolgáló osztály.
+- **Round:** kerekítés
+- **Pow:** hatványozás
+- **Sqrt:** négyzetgyök
+- **PI:** pi értéke
+- **Abs:** abszolút érték
+- **Ceiling:** felfelé kerekítés
+- **Floor:** lefelé kerekítés
+- **Max:** két szám közül a nagyobb
+- **Min:** két szám közül a kisebb
+- **Sin:** szinusz
+- **Cos:** koszinusz
+- **Tan:** tangens
+- **Asin:** arcszinusz
+- **Acos:** arccoszinusz
+- **Atan:** arctangens
+- **E:** e alapú logaritmus
+- **Log:** logaritmus
+- **Truncate:** törtrész eldobása
+
+
+
+
+
+- **Namespace:** névtér, osztályok csoportosítására szolgál, egy névtérben egy név csak egyszer használható
+- **Class:** osztály, adattagok és metódusok összessége, pl.: Program osztály: ez szimbolizálja a kódunkban a programot magát
+- **Main metódus:** a program belépési pontja, innen indul a program futása
+- **Metódus:** egy osztály eljárása vagy függvénye, utasítások sorozatát tartalmazza, lehet bemenete paramétereken keresztül
