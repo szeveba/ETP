@@ -120,7 +120,6 @@ switch (változó)
 	default:
 		// ha egyik sem
 		break;
-	}
 }
 
 if (változó == érték1) // ha érték1
