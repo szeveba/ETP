@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alapok", "Alapok\Alapok.csproj", "{FA2BAF23-8601-4676-A770-AFBA6D7386BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alapok", "Alapok\Alapok.csproj", "{FA2BAF23-8601-4676-A770-AFBA6D7386BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D7D62166-59EB-4753-9DF7-39C5FA51AAC3}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GyakorloFeladatok", "GyakorloFeladatok\GyakorloFeladatok.csproj", "{D9FA98BE-6A05-413E-A14C-69B524EF4959}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{FA2BAF23-8601-4676-A770-AFBA6D7386BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA2BAF23-8601-4676-A770-AFBA6D7386BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA2BAF23-8601-4676-A770-AFBA6D7386BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9FA98BE-6A05-413E-A14C-69B524EF4959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9FA98BE-6A05-413E-A14C-69B524EF4959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9FA98BE-6A05-413E-A14C-69B524EF4959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9FA98BE-6A05-413E-A14C-69B524EF4959}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

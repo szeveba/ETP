@@ -261,8 +261,13 @@ Nézetek megnyitása esetén: Ctrl + Q: Feature search
 - **Log:** logaritmus
 - **Truncate:** törtrész eldobása
 
-
-
+## Random számgenerálás
+- **Random:** véletlenszám generálására szolgáló osztály
+- Példányosítás utána a Next metódussal tudunk számot generálni
+```csharp
+Random random = new Random(); // inicializálás
+random.Next(1, 10); // 1 és 10 közötti szám, a 10 már nem lesz benne a tartományban
+```
 
 
 - **Namespace:** névtér, osztályok csoportosítására szolgál, egy névtérben egy név csak egyszer használható
