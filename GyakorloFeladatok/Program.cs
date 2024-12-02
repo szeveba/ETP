@@ -27,6 +27,7 @@
             int probalkozasokSzama = 1;
             int tippeltSzam = 0;
             Console.WriteLine("Gondoltam egy egész számra 1 és 100 között. Találd ki!");
+
             do
             {
                 try
@@ -50,12 +51,57 @@
                 }
             } while (tippeltSzam != veletlenSzam);
         }
+        public static void TippelosV3()
+        {
+            Random random = new Random();
+            int veletlenSzam = random.Next(1, 101);
+            int probalkozasokSzama = 1;
+            int tippeltSzam = 0;
+            Console.WriteLine("Gondoltam egy egész számra 1 és 100 között. Találd ki!");
+
+            do
+            {
+                tippeltSzam = ReadInt("Tipp: ");
+                if (tippeltSzam == veletlenSzam)
+                {
+                    Console.WriteLine("Gratulálok, eltaláltad! Próbálkozások száma: " + probalkozasokSzama);
+                }
+                else
+                {
+                    Console.WriteLine($"A tippelt szám {(tippeltSzam > veletlenSzam ? "kisebb" : "nagyobb")} mint amire gondoltam.");
+                    probalkozasokSzama++;
+                }
+
+            } while (tippeltSzam != veletlenSzam);
+        }
+        public static double ReadDouble(string message)
+        {
+            double result;
+            Console.Write(message);
+            while (!double.TryParse(Console.ReadLine(), out result))
+            {
+                Console.WriteLine("Átalakítás sikertelen, adjon meg egy valós számot: ");
+            }
+            return result;
+        }
+        public static int ReadInt(string message)
+        {
+            int result;
+            Console.Write(message);
+            string? input = Console.ReadLine();
+            while (!int.TryParse(input, out result))
+            {
+                Console.WriteLine("Átalakítás sikertelen, megadott hibás érték: "+input);
+                Console.Write(message);
+            }
+            return result;
+        }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Feladatok.TippelosV2();
+            Feladatok.TippelosV3();
         }
     }
 }

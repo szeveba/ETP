@@ -7,7 +7,7 @@
 - **deklaráció:** változó számára memória lefoglalása, pl.: ```int i;```
 - **értékadás:** meglévõ változó értékének megváltoztatása pl.: ```i = 5;```
 - **inicializálás:** változó létrehozása és értékadása egy lépésben, pl.: ```int i = 5;```
-- **literál:** kódba írt érték
+- **literál:** kódba írt érték, pl.: `"asd"`,`'c'`,`1`,`13.15`,`true`
 - **kifejezés:** literálok, változók és operátorok felhasználásával kifejezett érték
 
 ### Használat
@@ -49,6 +49,55 @@ tömb[1] = 2;
 tömb[2] = 3;
 // elemek felsorolásával
 int[] tömb2 = { 1, 2, 3 };
+```
+## Típuskonverziók
+### Karakterláncból szám
+#### Valós szám esetén
+```csharp
+string input = "5.6";
+double number = double.Parse(input);
+```
+#### Egész szám estén
+```csharp
+string input = "13";
+int number = int.Parse(input);
+```
+### Karakterláncból karakter kiválasztása
+A string tömbszerûen indexelhetõ.
+```csharp
+string input = "5.6";
+Console.WriteLine(input[1]) //kimenet: .
+```
+### Védekezés az átalakítás körüli hibáktól
+#### try-catch blokk
+```csharp
+try
+{
+    string input = "asd"
+    int szam = int.Parse(input);
+    //... folytatódik a végrehajtás ha nincs átalakítási probléma
+}
+catch (Exception)
+{
+	// ha probléma adódott átugrik a vezérlés a legpontosabban illeszkedõ catch ágba
+    Console.WriteLine("Hibás a bemenet amit adtál, csak számot adhatsz meg!");
+}
+```
+
+#### TryParse
+```csharp
+public static int ReadInt(string message)
+{
+    int result;
+    Console.Write(message);
+    string? input = Console.ReadLine();
+    while (!int.TryParse(input, out result))
+    {
+        Console.WriteLine("Átalakítás sikertelen, megadott hibás érték: "+input);
+        Console.Write(message);
+    }
+    return result;
+}
 ```
 
 ## Operátorok
